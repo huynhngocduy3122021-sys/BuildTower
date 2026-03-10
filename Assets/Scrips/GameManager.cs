@@ -9,8 +9,14 @@ public class GameManager : MonoBehaviour
     public Button[] answerButtons;
     public GameObject blockPrefab;
     public Transform spawnPoint;
+    public TimerManager timerManager;
+
+    public int maxWrongAttempts = 3;
+    private int wrongAttempts = 0;
+    public GameObject[] heartIcons;
 
     private int correctAnswer;
+    private int currentOrder = 1;
 
     void Start()
     {
@@ -57,12 +63,15 @@ public class GameManager : MonoBehaviour
 
     public void CheckAnswer(int buttonIndex)
     {
+        if (timerManager.isGameOver) return;
+
         int selectedAnswer = int.Parse(answerTexts[buttonIndex].text);
 
         if (selectedAnswer == correctAnswer)
         {
             Sprite buttonSprite = answerButtons[buttonIndex].GetComponent<Image>().sprite;
             DropBlock(selectedAnswer, buttonSprite);
+            
             GenerateQuestion();
         }
         else
@@ -75,10 +84,11 @@ public class GameManager : MonoBehaviour
     {
         GameObject newBlock = Instantiate(blockPrefab, spawnPoint.position, Quaternion.identity);
         
-        SpriteRenderer spriteRenderer = newBlock.GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
+        SpriteRenderer sr = newBlock.GetComponent<SpriteRenderer>();
+        if (sr != null)
         {
-            spriteRenderer.sprite = blockSprite;
+            sr.sprite = blockSprite;
+            sr.sortingOrder = currentOrder++;
         }
 
         TextMeshPro textComponent = newBlock.GetComponentInChildren<TextMeshPro>();
@@ -90,6 +100,16 @@ public class GameManager : MonoBehaviour
 
     private void HandleWrongAnswer()
     {
+        if (wrongAttempts < heartIcons.Length)
+        {
+            heartIcons[heartIcons.Length - 1 - wrongAttempts].SetActive(false);
+        }
+
+        wrongAttempts++;
         
+        if (wrongAttempts >= maxWrongAttempts)
+        {
+            timerManager.GameOver();
+        }
     }
 }
