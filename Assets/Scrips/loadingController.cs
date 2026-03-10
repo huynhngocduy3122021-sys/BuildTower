@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
-public class loaddingController : MonoBehaviour
+public class loadingController : MonoBehaviour
 {
    [SerializeField] private Slider loadingScreen;
     [SerializeField] private TMP_Text loadingText;

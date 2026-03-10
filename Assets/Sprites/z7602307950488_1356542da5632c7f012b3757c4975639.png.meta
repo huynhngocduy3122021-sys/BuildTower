@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 2a773c77e90736e49a53cd90c39ced76
+guid: f012c543221caf44fad920139932cd28
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6352874127253190833
-    second: z7602294113168_f6d714800817d966b7bf34901ae21941_0
+      213: 511297219427521635
+    second: z7602307950488_1356542da5632c7f012b3757c4975639_0
   - first:
-      213: -3917667324304022676
-    second: z7602294113168_f6d714800817d966b7bf34901ae21941_1
+      213: 756163638521277845
+    second: z7602307950488_1356542da5632c7f012b3757c4975639_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,17 +112,82 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: z7602294113168_f6d714800817d966b7bf34901ae21941_0
+      name: z7602307950488_1356542da5632c7f012b3757c4975639_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 535
-        width: 424
-        height: 403
+        x: 71
+        y: 527
+        width: 431
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b832b91c51f92850800000000000000
-      internalID: 6352874127253190833
+      spriteID: 3645f92bc1e781700800000000000000
+      internalID: 511297219427521635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: z7602294113168_f6d714800817d966b7bf34901ae21941_1
+      name: z7602307950488_1356542da5632c7f012b3757c4975639_1
       rect:
         serializedVersion: 2
         x: 71
-        y: 117
+        y: 108
         width: 431
-        height: 372
+        height: 381
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6324b24356a1a9c0800000000000000
-      internalID: -3917667324304022676
+      spriteID: 59da02aa2de6e7a00800000000000000
+      internalID: 756163638521277845
       vertices: []
       indices: 
       edges: []
@@ -173,8 +238,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      z7602294113168_f6d714800817d966b7bf34901ae21941_0: 6352874127253190833
-      z7602294113168_f6d714800817d966b7bf34901ae21941_1: -3917667324304022676
+      z7602307950488_1356542da5632c7f012b3757c4975639_0: 511297219427521635
+      z7602307950488_1356542da5632c7f012b3757c4975639_1: 756163638521277845
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
