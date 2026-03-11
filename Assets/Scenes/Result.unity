@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 205802657}
   - component: {fileID: 205802656}
   - component: {fileID: 205802655}
+  - component: {fileID: 205802658}
   m_Layer: 5
   m_Name: thoat
   m_TagString: Untagged
@@ -251,6 +252,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205802653}
   m_CullTransparentMesh: 1
+--- !u!114 &205802658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205802653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7fa530547b5164c9d482df99f0d251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationButton
+  scaleFactor: 1.4
+  pressScale: 0.9
 --- !u!1 &478457542
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +278,7 @@ GameObject:
   - component: {fileID: 478457546}
   - component: {fileID: 478457545}
   - component: {fileID: 478457544}
+  - component: {fileID: 478457547}
   m_Layer: 5
   m_Name: choiLai
   m_TagString: Untagged
@@ -383,6 +399,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478457542}
   m_CullTransparentMesh: 1
+--- !u!114 &478457547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478457542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7fa530547b5164c9d482df99f0d251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationButton
+  scaleFactor: 1.4
+  pressScale: 0.9
 --- !u!1 &700805608
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +425,7 @@ GameObject:
   - component: {fileID: 700805612}
   - component: {fileID: 700805611}
   - component: {fileID: 700805610}
+  - component: {fileID: 700805613}
   m_Layer: 5
   m_Name: choiTiep
   m_TagString: Untagged
@@ -515,6 +546,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700805608}
   m_CullTransparentMesh: 1
+--- !u!114 &700805613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700805608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7fa530547b5164c9d482df99f0d251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationButton
+  scaleFactor: 1.4
+  pressScale: 0.9
 --- !u!1 &965096202
 GameObject:
   m_ObjectHideFlags: 0
