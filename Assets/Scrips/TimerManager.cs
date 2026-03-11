@@ -1,11 +1,12 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimerManager : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    public float timeLimit = 10f;
-    public GameObject gameOverPanel;
+    public float timeLimit = 30f;
+    public string loseSceneName = "Result 1";
 
     private float currentTime;
     public bool isGameOver = false;
@@ -13,7 +14,6 @@ public class TimerManager : MonoBehaviour
     void Start()
     {
         currentTime = timeLimit;
-        if (gameOverPanel != null) gameOverPanel.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -34,18 +34,9 @@ public class TimerManager : MonoBehaviour
         }
     }
 
-    public void ResetTimer()
-    {
-        currentTime = timeLimit;
-    }
-
     public void GameOver()
     {
         isGameOver = true;
-        if (gameOverPanel != null)
-        {
-            gameOverPanel.SetActive(true);
-        }
-        Time.timeScale = 0;
+        SceneManager.LoadScene(loseSceneName);
     }
 }

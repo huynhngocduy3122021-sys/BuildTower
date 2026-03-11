@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class GameManager : MonoBehaviour
     public int maxWrongAttempts = 3;
     private int wrongAttempts = 0;
     public GameObject[] heartIcons;
+
+    public int targetScore = 5;
+    public string winSceneName = "Result";
+    public float winDelay = 1.5f;
+    private int currentScore = 0;
 
     private int correctAnswer;
     private int currentOrder = 1;
@@ -72,7 +79,17 @@ public class GameManager : MonoBehaviour
             Sprite buttonSprite = answerButtons[buttonIndex].GetComponent<Image>().sprite;
             DropBlock(selectedAnswer, buttonSprite);
             
-            GenerateQuestion();
+            currentScore++;
+
+            if (currentScore >= targetScore)
+            {
+                timerManager.isGameOver = true;
+                StartCoroutine(WaitAndLoadWinScene());
+            }
+            else
+            {
+                GenerateQuestion();
+            }
         }
         else
         {
@@ -111,5 +128,11 @@ public class GameManager : MonoBehaviour
         {
             timerManager.GameOver();
         }
+    }
+
+    private IEnumerator WaitAndLoadWinScene()
+    {
+        yield return new WaitForSeconds(winDelay);
+        SceneManager.LoadScene(winSceneName);
     }
 }
