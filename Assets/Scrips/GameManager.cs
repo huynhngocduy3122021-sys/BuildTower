@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject blockPrefab;
     public Transform spawnPoint;
     public TimerManager timerManager;
+    public GameObject tutorialPanel;
 
     public int maxWrongAttempts = 3;
     private int wrongAttempts = 0;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        CheckTutorial();
         SetupButtons();
         GenerateQuestion();
     }
@@ -134,5 +136,13 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(winDelay);
         SceneManager.LoadScene(winSceneName);
+    }
+    void CheckTutorial()
+    {
+        if(PlayerPrefs.GetInt("TutorialShown", 0) == 0)
+        {
+            tutorialPanel.SetActive(true);
+            Time.timeScale = 0f; // dừng game
+        }
     }
 }
